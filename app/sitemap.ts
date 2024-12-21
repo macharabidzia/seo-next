@@ -1,8 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import { MetadataRoute } from "next";
-import { Post } from "./utils/interface";
 
-export default async function sitemap():Promise<MetadataRoute.Sitemap> {
+export default async function sitemap():Promise<MetadataRoute.Sitemap>{
 
   async function getPosts() {
     const query = `
@@ -21,24 +20,25 @@ export default async function sitemap():Promise<MetadataRoute.Sitemap> {
     const data = await client.fetch(query);
     return data;
   }
-
-  const posts: Post[] = await getPosts();
-
-  const postUrls = posts.map((post) => ({
-    url: `https://next-cms-blog-ce.vercel.app/${post.slug.current}`,
-    lastModified: new Date(post.publishedAt),
-  }))
-
-
+  const posts = await getPosts();
+  const postUrls = posts.map((post:any) => {
+    return {
+      url:`https://seo-next-pdhe.vercel.app/${post.slug.current}`,
+      lastModified:new Date(post.publishedAt)
+    }
+  })
+  
   return [
     {
-      url: `https://next-cms-blog-ce.vercel.app/`,
-      lastModified: new Date(),
+      url:'https://seo-next-pdhe.vercel.app/',
+      lastModified:new Date()
     },
     {
-      url: "https://next-cms-blog-ce.vercel.app/tag",
-      lastModified: new Date(),
+      url:'https://seo-next-pdhe.vercel.app/tag',
+      lastModified:new Date()
     },
-    ...postUrls, 
+    ...postUrls
+    
   ]
+  
 }

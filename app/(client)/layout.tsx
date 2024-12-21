@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "A blog for developers by developers it's best for web developers! dev dev dev",
   openGraph: {
     title: "Dev Blook - A blog for developers",
-    description: "A blog for developers by developers! great place! BEST!",
+    description: "A blog for developers by developers! great place! BEST! thebest",
     type: "website",
     locale: "en_US",
     url: "https://seo-next-pdhe.vercel.app/",

@@ -1,5 +1,5 @@
-import { MetadataRoute } from "next";
-
+import type { MetadataRoute } from 'next'
+ 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/studio',
     },
-    sitemap: 'https://next-cms-blog-ce.vercel.app/sitemap.xml',
+    sitemap: 'https://seo-next-pdhe.vercel.app/',
   }
 }
