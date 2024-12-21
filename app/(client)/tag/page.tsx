@@ -21,13 +21,19 @@ async function getAllTags() {
 
 export const revalidate = 60;
 
-export const metadata: Metadata = {
-  title: "Tags",
-  // title: {
-  //   absolute: "TAGS",
-  // },
-  description: "Search for posts by tags on the blog"
+
+export async function generateMetadata({params}:Params){
+  return {
+    title:`#${params.slug}`,
+    description:`Posts with tag ${params.slug}`
+  }
 }
+
+interface Params{
+  params:{
+    slug:string 
+  }
+
 
 const page = async () => {
   const tags: Tag[] = await getAllTags();
