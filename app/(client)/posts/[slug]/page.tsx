@@ -54,10 +54,10 @@ async function getPost(slug: string, commentsOrder: string = "desc") {
 
 export const revalidate = 60;
 
-// export const metadata:Metadata = {
-//   title:"Tags | Dev Blook - A blog for developers",
-//   description:"Search for posts by tags on the blog"
-// }
+export const metadata:Metadata = {
+  title:"Tags | Dev Blook - A blog for developers",
+  description:"Search for posts by tags on the blog"
+}
 
 export async function generateMetadata({
   params,
@@ -78,14 +78,11 @@ export async function generateMetadata({
       url: `https://seo-next-pdhe.vercel.app/${params.slug}`,
       siteName: "DevBlook",
       images: [
-        // {
-        //   url: post.image,
-        // }
-        // {
-        //   url: urlForImage(post?.body?.find((b: any) => b._type === "image")).width(1200).height(630).url(),
-        //   width: 1200,
-        //   height: 630,
-        // },
+        {
+          url: urlForImage(post?.body?.find((b: any) => b._type === "image")).width(1200).height(630).url(),
+          width: 1200,
+          height: 630,
+        },
       ],
     },
   };
