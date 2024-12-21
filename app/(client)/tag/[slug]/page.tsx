@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Params) {
       description: `Posts with the tag ${params.slug}`,
       type: "website",
       locale: "en_US",
-      url: `https://next-cms-blog-ce.vercel.app/${params.slug}`,
+      url: `https://seo-next-pdhe.vercel.app/${params.slug}`,
       siteName: "DevBlook",
     },
   };
