@@ -54,6 +54,11 @@ async function getPost(slug: string, commentsOrder: string = "desc") {
 
 export const revalidate = 60;
 
+// export const metadata:Metadata = {
+//   title:"Tags | Dev Blook - A blog for developers",
+//   description:"Search for posts by tags on the blog"
+// }
+
 export async function generateMetadata({
   params,
 }: Params): Promise<Metadata | undefined> {
@@ -70,7 +75,7 @@ export async function generateMetadata({
       description: post.excerpt,
       type: "article",
       locale: "en_US",
-      url: `https://next-cms-blog-ce.vercel.app/${params.slug}`,
+      url: `https://seo-next-pdhe.vercel.app/${params.slug}`,
       siteName: "DevBlook",
       images: [
         // {
