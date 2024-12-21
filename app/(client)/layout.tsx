@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Dev Blook - A blog for developers",
     template: '%s | Dev Blook - A blog for developers'
   },
-  description: "A blog for developers by developers!",
+  description: "A blog for developers by developers it's best for web developers!",
   openGraph: {
     title: "Dev Blook - A blog for developers",
     description: "A blog for developers by developers!",
