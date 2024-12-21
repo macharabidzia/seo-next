@@ -33,6 +33,7 @@ interface Params{
   params:{
     slug:string 
   }
+}
 
 
 const page = async () => {

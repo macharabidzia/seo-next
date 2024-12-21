@@ -54,10 +54,6 @@ async function getPost(slug: string, commentsOrder: string = "desc") {
 
 export const revalidate = 60;
 
-export const metadata:Metadata = {
-  title:"Tags | Dev Blook - A blog for developers",
-  description:"Search for posts by tags on the blog"
-}
 
 export async function generateMetadata({
   params,

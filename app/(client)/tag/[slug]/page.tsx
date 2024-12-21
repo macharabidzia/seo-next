@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Params) {
 interface Params {
   params: {
     slug: string;
-  };
+  }
 }
 
 const page = async ({ params }: Params) => {
